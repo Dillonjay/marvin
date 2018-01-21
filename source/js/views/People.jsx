@@ -39,11 +39,41 @@ export default class People extends Component {
       return (
         <div key={ person.url } className='People-person'>
           <h3>{ person.name }</h3>
-          <div>Height: { person.height }</div>
-          <div>Mass: { person.mass }</div>
-          <div>Eye color: { person.eye_color }</div>
-          <div>Hair color: { person.hair_color }</div>
-          <div>Birth year: { person.birth_year }</div>
+          <div>
+            <FormattedMessage
+              id='people.person.height'
+              defaultMessage='Height: {height}'
+              values={ { height: person.height } }
+            />
+          </div>
+          <div>
+            <FormattedMessage
+              id='people.person.mass'
+              defaultMessage='Mass: {mass}'
+              values={ { mass: person.mass } }
+            />
+          </div>
+          <div>
+            <FormattedMessage
+              id='people.person.eyeColor'
+              defaultMessage='Eye color: {eyeColor}'
+              values={ { eyeColor: person.eye_color } }
+            />
+          </div>
+          <div>
+            <FormattedMessage
+              id='people.person.hairColor'
+              defaultMessage='Hair color: {hairColor}'
+              values={ { hairColor: person.hair_color } }
+            />
+          </div>
+          <div>
+            <FormattedMessage
+              id='people.person.birthYear'
+              defaultMessage='Birth year: {birthYear}'
+              values={ { birthYear: person.birth_year } }
+            />
+          </div>
         </div>
       );
     });
@@ -58,7 +88,12 @@ export default class People extends Component {
 
     return (
       <div className='People'>
-        <h1>People</h1>
+        <h1>
+          <FormattedMessage
+            id='people.heading'
+            defaultMessage='People'
+          />
+        </h1>
         { loading && <div>Loading people...</div> }
         { error && error.toString() }
         <div className='People-list'>

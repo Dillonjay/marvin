@@ -30,7 +30,10 @@ export default class NotFound extends Component {
       <RouteStatus code={ 404 }>
         <div className='NotFound'>
           <h1>
-            <FormattedMessage id='notFound.heading' />
+            <FormattedMessage
+              id='notFound.heading'
+              defaultMessage='Not Found'
+            />
           </h1>
         </div>
       </RouteStatus>

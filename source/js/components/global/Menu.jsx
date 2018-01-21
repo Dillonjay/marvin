@@ -23,21 +23,30 @@ export default class Menu extends Component {
             exact
             to={ routeCodes.HOME }
           >
-            <FormattedMessage id='menu.home' />
+            <FormattedMessage
+              id='menu.home'
+              defaultMessage='Home'
+            />
           </NavLink>
           <NavLink
             activeClassName='Menu-link--active'
             className='Menu-link'
             to={ routeCodes.PEOPLE }
           >
-            <FormattedMessage id='menu.dataExample' />
+            <FormattedMessage
+              id='menu.dataExample'
+              defaultMessage='API data example'
+            />
           </NavLink>
           <NavLink
             activeClassName='Menu-link--active'
             className='Menu-link'
             to='/404'
           >
-            <FormattedMessage id='menu.404' />
+            <FormattedMessage
+              id='menu.404'
+              defaultMessage='404'
+            />
           </NavLink>
         </div>
       </div>

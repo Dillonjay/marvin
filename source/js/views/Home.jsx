@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, FormattedHTMLMessage } from 'react-intl';
 
 
 import { increment } from 'actions/app';
@@ -35,56 +35,92 @@ export default class Home extends Component {
       <div className='Home'>
         <h1>Marvin</h1>
         <p>
-          <FormattedMessage id='home.heading' />
+          <FormattedMessage
+            id='home.heading'
+            defaultMessage='Boilerplate for kicking off React/Redux applications.'
+          />
         </p>
 
         <h2>
-          <FormattedMessage id='home.about.heading' />
+          <FormattedMessage
+            id='home.about.heading'
+            defaultMessage='About'
+          />
         </h2>
 
         <p>
-          Marvin is internal project by <a href='https://work.co'>Work & Co</a>.
-          We love React and use it a lot. So Marvin is meant to be a starting point
-          for our React projects. But as we love open source too, it is publicly
-          available for anyone interested in using it.
+          <FormattedHTMLMessage
+            id='home.about.explanation'
+            defaultMessage={ `Marvin is internal project by <a href='https://work.co'>Work & Co</a>.
+            We love React and use it a lot. So Marvin is meant to be a starting point
+            for our React projects. But as we love open source too, it is publicly
+            available for anyone interested in using it.` }
+          />
         </p>
         <p>
-          Visit documentation
-          on <a href='https://github.com/workco/react-redux-webpack2-boilerplate'>GitHub</a>
+          <FormattedHTMLMessage
+            id='home.about.moreInformation'
+            defaultMessage={ `Visit documentation on 
+            <a href="https://github.com/workco/react-redux-webpack2-boilerplate">GitHub</a>` }
+          />
         </p>
 
         <hr />
 
         <h2>
-          <FormattedMessage id='home.examples.heading' />
+          <FormattedMessage
+            id='home.examples.heading'
+            defaultMessage='Examples'
+          />
         </h2>
 
         <h3>
-          <FormattedMessage id='home.examples.action.heading' />
+          <FormattedMessage
+            id='home.examples.action.heading'
+            defaultMessage='Action'
+          />
         </h3>
         <div className='Example'>
-          <p>Counter: { counter }</p>
+          <p>
+            <FormattedMessage
+              id='home.examples.action.counter'
+              defaultMessage='Counter: {counter}'
+              values={ { counter } }
+            />
+          </p>
           <button onClick={ this.handleTestButtonClick }>
-            <FormattedMessage id='home.examples.action.increaseButton' />
+            <FormattedMessage
+              id='home.examples.action.increaseButton'
+              defaultMessage='Increase'
+            />
           </button>
         </div>
 
         <h3>
-          <FormattedMessage id='home.examples.backgroundImage' />
+          <FormattedMessage
+            id='home.examples.backgroundImage'
+            defaultMessage='Background image'
+          />
         </h3>
         <div className='Example'>
           <div className='BackgroundImgExample' />
         </div>
 
         <h3>
-          <FormattedMessage id='home.examples.importedImage' />
+          <FormattedMessage
+            id='home.examples.importedImage'
+            defaultMessage='Image imported to the component'
+          />
         </h3>
         <div className='Example'>
           <img src={ bookImg } alt='' className='ImgExample' />
         </div>
 
         <h3>
-          <FormattedMessage id='home.examples.importedSVG' />
+          <FormattedMessage
+            id='home.examples.importedSVG'
+            defaultMessagg='SVGs imported as react components'
+          />
         </h3>
         <div className='Example'>
           <CircleSvg style={ { marginRight: 10 } } />

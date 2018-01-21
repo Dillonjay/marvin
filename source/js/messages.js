@@ -25,7 +25,7 @@ export default {
         heading: 'Examples',
         action: {
           heading: 'Action',
-          counter: 'Counter {counter}',
+          counter: 'Counter: {counter}',
           increaseButton: 'Increase',
         },
         backgroundImage: 'Background image',

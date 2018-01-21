@@ -1,12 +1,17 @@
 /*
-  This is where all translations will live. This is where you will add all app translations.
-  You must MANUALLY add the translations that your app needs.
+  This is where all app translations will live.
+  You must MANUALLY add the translations here.
 */
 
 export default {
   'en': {
+    menu: {
+      home: 'Home',
+      dataExample: 'API data example',
+      404: '404',
+    },
     home: {
-      hero: 'Boilerplate for kicking off React/Redux applications.',
+      heading: 'Boilerplate for kicking off React/Redux applications.',
       about: {
         heading: 'About',
         explanation: `Marvin is internal project by <a href="https://work.co">Work & Co.</a> 
@@ -28,10 +33,28 @@ export default {
         importedSVG: 'SVGs imported as react components',
       },
     },
+    people: {
+      heading: 'People',
+      person: {
+        height: 'Height: {height}',
+        mass: 'Mass: {mass}',
+        eyeColor: 'Eye color: {eyeColor}',
+        hairColor: 'Hair color: {hairColor}',
+        birthYear: 'Birth year: {birthYear}',
+      },
+    },
+    notFound: {
+      heading: 'Not Found',
+    },
   },
   'es': {
+    menu: {
+      home: 'Inicio',
+      dataExample: 'Ejemplo de datos API',
+      404: '404',
+    },
     home: {
-      hero: 'Plantilla repetitiva para lanzar aplicaciones React / Redux.',
+      heading: 'Plantilla repetitiva para lanzar aplicaciones React / Redux.',
       about: {
         heading: 'Acerca de',
         explanation: `Marvin es un proyecto interno de <a href="https://work.co">Work & Co.</a>
@@ -53,6 +76,19 @@ export default {
         importedImage: 'Imagen importada al componente',
         importedSVG: 'SVG importados como componentes de reacción',
       },
+    },
+    people: {
+      heading: 'Gente',
+      person: {
+        height: 'Altura: {height}',
+        mass: 'Masa: {mass}',
+        eyeColor: 'Color de los ojos: {eyeColor}',
+        hairColor: 'Color de pelo: {hairColor}',
+        birthYear: 'Año de nacimiento: {birthYear}',
+      },
+    },
+    notFound: {
+      heading: 'Extraviado',
     },
   },
 

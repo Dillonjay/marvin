@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { FormattedMessage } from 'react-intl';
+
+
 import { increment } from 'actions/app';
 import CircleSvg from 'svg/circle.svg';
 import SquareSvg from 'svg/square.svg';
@@ -32,10 +35,12 @@ export default class Home extends Component {
       <div className='Home'>
         <h1>Marvin</h1>
         <p>
-          Boilerplate for kicking off React/Redux applications.
+          <FormattedMessage id='home.heading' />
         </p>
 
-        <h2>About</h2>
+        <h2>
+          <FormattedMessage id='home.about.heading' />
+        </h2>
 
         <p>
           Marvin is internal project by <a href='https://work.co'>Work & Co</a>.
@@ -50,27 +55,37 @@ export default class Home extends Component {
 
         <hr />
 
-        <h2>Examples</h2>
+        <h2>
+          <FormattedMessage id='home.examples.heading' />
+        </h2>
 
-        <h3>Action</h3>
+        <h3>
+          <FormattedMessage id='home.examples.action.heading' />
+        </h3>
         <div className='Example'>
           <p>Counter: { counter }</p>
           <button onClick={ this.handleTestButtonClick }>
-            Increase
+            <FormattedMessage id='home.examples.action.increaseButton' />
           </button>
         </div>
 
-        <h3>Background image</h3>
+        <h3>
+          <FormattedMessage id='home.examples.backgroundImage' />
+        </h3>
         <div className='Example'>
           <div className='BackgroundImgExample' />
         </div>
 
-        <h3>Image imported to the component</h3>
+        <h3>
+          <FormattedMessage id='home.examples.importedImage' />
+        </h3>
         <div className='Example'>
           <img src={ bookImg } alt='' className='ImgExample' />
         </div>
 
-        <h3>SVGs imported as react components</h3>
+        <h3>
+          <FormattedMessage id='home.examples.importedSVG' />
+        </h3>
         <div className='Example'>
           <CircleSvg style={ { marginRight: 10 } } />
           <SquareSvg style={ { marginRight: 10 } } />

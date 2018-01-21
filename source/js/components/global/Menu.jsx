@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
+import { FormattedMessage } from 'react-intl';
 import { routeCodes } from 'constants/routes';
 import workAndCoLogoImg from 'img/workco-logo.svg';
 
@@ -22,21 +23,21 @@ export default class Menu extends Component {
             exact
             to={ routeCodes.HOME }
           >
-            Home
+            <FormattedMessage id='menu.home' />
           </NavLink>
           <NavLink
             activeClassName='Menu-link--active'
             className='Menu-link'
             to={ routeCodes.PEOPLE }
           >
-            API data example
+            <FormattedMessage id='menu.dataExample' />
           </NavLink>
           <NavLink
             activeClassName='Menu-link--active'
             className='Menu-link'
             to='/404'
           >
-            404
+            <FormattedMessage id='menu.404' />
           </NavLink>
         </div>
       </div>
